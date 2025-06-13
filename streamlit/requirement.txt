@@ -1,3 +1,4 @@
 streamlit
 nepali_date_utils
+Pillow
 
