@@ -1,0 +1,7 @@
+pinecone
+fritz
+google-generativeai
+PyMuPDF
+tiktoken
+groq
+streamlit
