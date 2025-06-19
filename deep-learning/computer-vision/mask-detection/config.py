@@ -1,0 +1,3 @@
+MODEL_PATH = "model/best.pt"
+DETECTION_THRESHOLD = 0.5
+DEFULT_CAMERA = 0   
