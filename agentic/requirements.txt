@@ -1,3 +1,5 @@
 streamlit
 groq
-
+langchain_groq
+langchain_community
+google-search-results
