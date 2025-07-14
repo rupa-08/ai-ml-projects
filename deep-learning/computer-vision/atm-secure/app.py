@@ -11,7 +11,7 @@ from config import DEFULT_CAMERA
 detection_service = DetectionService()
 audio_service = AudioService()
 
-st.title("Secure Helmet")
+st.title("ATM Secure")
 st.subheader("Upload your image/video or use you webcam to detect helmet. If helmet is detected beep sound is produced and atm is locked")
 
 st.sidebar.subheader("Input Settings")
@@ -66,8 +66,9 @@ def process_video(file):
         ret, frame = cap.read()
 
         if not ret:
-            st.error("Error capturing frame.")
+            # st.error("Error capturing frame.")
             break
+
         processed_frame = process_image(frame)
         stframe.image(processed_frame, channels="BGR")
 
@@ -95,5 +96,8 @@ if input_type == "Video":
     video = st.sidebar.file_uploader("Upload video: ", type=['mov','mp4'])
 
     if video is not None:
-        processed_video = process_video(video)
-        st.video(processed_video, caption="Processed Video")
+        # processed_video = process_video(video)
+        # st.video(processed_video)
+        video_path = process_video(video)
+        if video_path:
+            st.video(video_path)
